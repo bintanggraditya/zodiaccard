@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kartu Zodiak</title>
+  <meta name="description" content="Isi nama, asal, dan tanggal lahir, lalu dapatkan kartu zodiakmu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+Symbols&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">✦ Kartu Zodiak ✦</p>
+      <h1>Temukan zodiakmu</h1>
+      <p class="sub">Isi tiga data di bawah ini, lalu unduh kartu zodiakmu.</p>
+    </header>
+
+    <section class="panel">
+      <form id="zodiac-form" novalidate>
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input id="nama" name="nama" type="text" maxlength="40" placeholder="Contoh: Sinta Dewi" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="asal">Asal</label>
+          <input id="asal" name="asal" type="text" maxlength="40" placeholder="Contoh: Malang" autocomplete="address-level2" required>
+        </div>
+        <div class="field">
+          <label for="tanggal">Tanggal lahir</label>
+          <input id="tanggal" name="tanggal" type="date" min="1900-01-01" required>
+        </div>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <button id="submit-btn" type="submit" class="btn">Buat Kartu</button>
+      </form>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <div class="card-wrap" id="card-wrap">
+        <div class="card-scaler" id="card-scaler">
+          <article class="card" id="card">
+            <div class="stars" id="stars"></div>
+            <div class="card-left">
+              <div class="ring"><span class="symbol" id="c-simbol"></span></div>
+              <div class="z-name" id="c-zodiak"></div>
+              <div class="z-range" id="c-rentang"></div>
+            </div>
+            <div class="card-right">
+              <div class="label">KARTU ZODIAK</div>
+              <div class="holder" id="c-nama"></div>
+              <div class="meta"><span id="c-asal"></span> &bull; <span id="c-tanggal"></span></div>
+              <div class="element" id="c-unsur"></div>
+              <p class="desc" id="c-deskripsi"></p>
+              <div class="traits" id="c-sifat"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="download-btn" type="button" class="btn">Unduh Kartu (PNG)</button>
+        <button id="reset-btn" type="button" class="btn secondary">Buat Kartu Lain</button>
+      </div>
+      <p id="save-status" class="status" aria-live="polite"></p>
+    </section>
+
+    <footer class="foot">Dibuat dengan HTML, CSS, dan JavaScript &middot; Data dicatat di Google Sheets</footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
