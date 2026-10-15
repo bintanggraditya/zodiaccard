@@ -5,7 +5,7 @@
    Ganti nilai di bawah dengan URL Web App Google Apps Script Anda
    (berakhiran /exec). Lihat README.md untuk langkah lengkapnya.
    ===================================================================== */
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxQNF_leAQYQUWpjoTu0SweQQsWgtnIwPaWVhLoc9chybd-gQbmBy__u5uHXf5Jn3o/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxY3Mt6l0LOb4a5_4fe3H2lXOgQvS3DUyznOcME0ffajp2Hv6hJlNhPXbh-oDQbByhI/exec';
 
 /* ---------------------------------------------------------------------
    Data zodiak
